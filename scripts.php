@@ -2,7 +2,8 @@
 
     <!-- Core JavaScript Files -->
     <script src="js/jquery.min.js"></script>	 
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.sticky.js"></script>
     <script src="js/jquery.easing.min.js"></script>	
 	<script src="js/jquery.scrollTo.js"></script>

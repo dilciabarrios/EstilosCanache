@@ -26,10 +26,35 @@
 						<span class="fa fa-laptop fa-2x"></span> 
 					</div>
 					<div class="service-desc">						
-						<h5>Diseno de Vestidos</h5>
+						<h5>
+							<?php
+							// include Database connection file
+							    include("admin/resources/includes/db_connection.php");
+
+							?>
+							    
+							</h5>
 						<div class="divider-header"></div>
 						<p>
-						Ad denique euripidis signiferumque vim, iusto admodum quo cu. No tritani neglegentur mediocritatem duo.
+							<?php
+
+								$result=mysql_query("SELECT * FROM ACERCA");
+									$contador= 1;
+									while($row = mysql_fetch_assoc($result)) 
+										{
+											if ($contador%3==0)
+											
+											{
+												continue;
+												
+											}
+											echo ''.$row['parrafo'].'';
+											$contador= $contador-1;
+								
+										}
+									 ?>
+							    
+									
 						</p>
 						<a href="#" class="btn btn-skin">Learn more</a>
 					</div>
@@ -43,10 +68,27 @@
 						<span class="fa fa-camera fa-2x"></span> 
 					</div>
 					<div class="service-desc">
-						<h5>Cursos Alta Costura</h5>
+						<h5></h5>
 						<div class="divider-header"></div>
 						<p>
-						Ad denique euripidis signiferumque vim, iusto admodum quo cu. No tritani neglegentur mediocritatem duo.
+							<?php
+
+								$result=mysql_query("SELECT * FROM ACERCA");
+									$contador= 1;
+									while($row = mysql_fetch_assoc($result)) 
+										{
+											if ($contador%3==0)
+											
+											{
+												continue;
+												
+											}
+											echo ''.$row['parrafo'].'';
+											$contador= $contador+1;
+								
+										}
+									 ?>
+							    
 						</p>
 						<a href="#" class="btn btn-skin">Learn more</a>
 					</div>
@@ -60,10 +102,12 @@
 						<span class="fa fa-code fa-2x"></span> 
 					</div>
 					<div class="service-desc">
-						<h5>Elaboracion de Patrones</h5>
+						<h5>
+
+						</h5>
 						<div class="divider-header"></div>
 						<p>
-						Ad denique euripidis signiferumque vim, iusto admodum quo cu. No tritani neglegentur mediocritatem duo.
+							
 						</p>
 						<a href="#" class="btn btn-skin">Learn more</a>
 					</div>
