@@ -5,12 +5,12 @@
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2">
 					<div>
-					<div class="animatedParent">
-					<div class="section-heading text-center">
-					<h2 class="h-bold animated bounceInDown">Nuestras Confecciones</h2>
-					<div class="divider-header"></div>
-					</div>
-					</div>
+						<div class="animatedParent">
+							<div class="section-heading text-center">
+								<h2 class="h-bold animated bounceInDown">Nuestras Confecciones</h2>
+								<div class="divider-header"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -18,10 +18,8 @@
 		</div>
 
 		<div class="container">
-
             <div class="row animatedParent">
                 <div class="col-sm-12 col-md-12 col-lg-12" >
-
                     <div class="row gallery-item">
                         <div class="col-md-3 animated fadeInUp">
 							<a href="img/works/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg">
@@ -44,9 +42,7 @@
 							</a>
 						</div>
 					</div>
-	
                 </div>
             </div>	
 		</div>
-	</section>
-	<!-- /Section: works -->
+	</section><!-- /Section: works -->

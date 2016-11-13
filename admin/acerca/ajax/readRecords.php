@@ -1,6 +1,6 @@
 <?php
 	// include Database connection file 
-	include("db_connection.php");
+	include("../../resources/includes/db_connection.php");
 
 	// Design initial table header 
 	$data = '<table class="table table-bordered table-striped">

@@ -16,37 +16,32 @@
 	<link href="assets/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-  
-  <div class="row" id="pwd-container">
-    <div class="col-md-4"></div>
-    
-    <div class="col-md-4">
-      <section class="login-form">
-        <form method="post" action="validar.php" role="login">
-         
-          <input type="text" name="usuario" placeholder="Usuario" required class="form-control input-lg" value="" />
-          
-          <input type="password" class="form-control input-lg"  name="clave" id="clave" placeholder="Password" required="" />
-          
-          
-          <div class="pwstrength_viewport_progress"></div>
-          
-          
-          <button type="submit" name="login" class="btn btn-lg btn-primary btn-block">Iniciar Sesion</button>
-          
-        </form>
-        
-        <div class="form-links">
-          
-        </div>
-      </section>  
-      </div>
-      
-      <div class="col-md-4"></div>
-      
+	<div class="container"> 
+	  <div class="row" id="pwd-container">
+	    <div class="col-md-4">
+	    </div>
+	    
+	    <div class="col-md-4">
+	      <section class="login-form">
+		        <form method="post" action="validar.php" role="login">
+		         
+		          <input type="text" name="usuario" placeholder="Usuario" required class="form-control input-lg" value="" />
+		          
+		          <input type="password" class="form-control input-lg"  name="clave" id="clave" placeholder="Password" required="" />
+		          
+		          <div class="pwstrength_viewport_progress"></div>
 
-  </div>
+		          <button type="submit" name="login" class="btn btn-lg btn-primary btn-block">Iniciar Sesion</button>
+		          
+		        </form>
+		        <div class="form-links">
+		        </div>
+	      </section>  
+	    </div>
+	      
+	    <div class="col-md-4">	
+	    </div>
+	</div>
   
 <script src="js/jquery.js"></script>
 <script src="js/jquery-latest.js"></script>

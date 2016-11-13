@@ -29,7 +29,7 @@
                             </div>
                         </div>
                     </div><!-- /header-text -->
-                </div>
+                </div><!-- /item active 1 -->
                 <div class="item">
                     <img src="img/JLR_0311.jpg">
                     <!-- Static Header -->
@@ -47,7 +47,7 @@
                             </div>
                         </div>
                     </div><!-- /header-text -->
-                </div>
+                </div><!-- /item active 2 -->
                 <div class="item">
                     <img src="img/JLR_0150.jpg">
                     <!-- Static Header -->
@@ -65,8 +65,8 @@
                             </div>
                         </div>
                     </div><!-- /header-text -->
-                </div>
-            </div>
+                </div><!-- /item active 3 -->
+            </div><!-- /carousel-inner-->
             <!-- Controls -->
             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left"></span>
@@ -75,5 +75,5 @@
                 <span class="glyphicon glyphicon-chevron-right"></span>
             </a>
         </div><!-- /carousel -->
-    </div>
-</div>
+    </div><!-- /row -->
+</div><!-- /container -->

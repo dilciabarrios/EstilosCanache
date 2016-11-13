@@ -3,8 +3,7 @@
 if(isset($_POST))
 {
     // include Database connection file
-    include("db_connection.php");
-
+    include("../../resources/includes/db_connection.php");
     // get values
     $id = $_POST['id'];
     $titulo = $_POST['titulo'];

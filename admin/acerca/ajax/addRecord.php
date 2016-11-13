@@ -4,7 +4,8 @@
 	{
 
 		// include Database connection file 
-		include("db_connection.php");
+		
+		include("../../resources/includes/db_connection.php");
 		// get values 
 		$titulo = $_POST['titulo'];
 		$parrafo = $_POST['parrafo'];

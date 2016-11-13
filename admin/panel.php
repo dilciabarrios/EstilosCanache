@@ -1,13 +1,10 @@
 <?php
 session_start();
 include 'server.php';
-
 if(isset($_SESSION['usuario'])) {?>
-
-
 <? include('resources/includes/header.php'); ?>
-
 <? include('resources/includes/navbar.php'); ?>
+
 	<div class="container">
 		<div class="container-fluid">	
 			<div class="modulos">
@@ -70,7 +67,6 @@ if(isset($_SESSION['usuario'])) {?>
 		        </div>
 			</div>
 		</div>
-
 	</div>
 
 	<script src="js/jquery.js"></script>
@@ -79,12 +75,12 @@ if(isset($_SESSION['usuario'])) {?>
 </body>
 </html>
 
-  <a href="logout.php"></a>
+<a href="logout.php"></a>
 </div>
 </body>
 </html>
 <?php
-}else{
-	echo '<script> window.location="index.php"; </script>';
-}
+	}else{
+		echo '<script> window.location="index.php"; </script>';
+	}
 ?>
