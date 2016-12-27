@@ -1,4 +1,7 @@
-<?php ?>
+<?php 							
+// include Database connection file
+include("admin/resources/includes/db_connection.php");
+?>
 	<!-- Section: works -->
     <section id="works" class="home-section color-dark text-center bg-white">
 		<div class="container marginbot-50">
@@ -18,31 +21,34 @@
 		</div>
 
 		<div class="container">
-            <div class="row animatedParent">
-                <div class="col-sm-12 col-md-12 col-lg-12" >
-                    <div class="row gallery-item">
-                        <div class="col-md-3 animated fadeInUp">
-							<a href="img/works/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg">
-								<img src="img/works/1.jpg" class="img-responsive" alt="img">
-							</a>
-						</div>
-						<div class="col-md-3 animated fadeInUp slow">
-							<a href="img/works/2.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg">
-								<img src="img/works/2.jpg" class="img-responsive" alt="img">
-							</a>
-						</div>
-						<div class="col-md-3 animated fadeInUp slower">
-							<a href="img/works/3.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg">
-								<img src="img/works/3.jpg" class="img-responsive" alt="img">
-							</a>
-						</div>
-						<div class="col-md-3 animated fadeInUp">
-							<a href="img/works/4.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg">
-								<img src="img/works/4.jpg" class="img-responsive" alt="img">
-							</a>
-						</div>
-					</div>
-                </div>
-            </div>	
+	      <div class="row animatedParent">
+	          <div class="col-sm-12 col-md-12 col-lg-12" >
+	              <div class="row gallery-item">
+
+										<?php
+
+										$result=mysql_query("SELECT * FROM portafolio WHERE destacado =1");
+
+										$ruta = "admin/portafolio/imagenes/";  ?>
+									   
+										   <? //utilizar la consulta y utilizar while
+
+											  while($row = mysql_fetch_assoc($result)) { ?>
+
+											 	<div class="col-md-3 animated fadeInUp">
+
+											 	<? 
+												echo '<a href="admin/portafolio/imagenes/'.$row['imagen'].'" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="admin/portafolio/imagenes">
+																<img src="admin/portafolio/imagenes/'.$row['imagen'].'" class="img-responsive" alt="img">
+															</a>'; ?>
+
+												</div>
+												<? 
+												  }
+												?>
+								</div>
+	          </div>
+	      </div>	
+			</div>
 		</div>
 	</section><!-- /Section: works -->

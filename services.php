@@ -22,49 +22,27 @@ include("admin/resources/includes/db_connection.php");
 	<div class="text-center">
 		<div class="row animatedParent">
 			<?php
-			$result=mysql_query("SELECT * FROM ACERCA");
-			$contador= 0;
-			$contador= 1;
-			while($row = mysql_fetch_assoc($result)) 
-				{ 
-					if ($contador!=0 and $contador%3==0)
-				{ echo '<br />'; }
-				else 
-				{ echo '
-			<div class="col-xs-6 col-sm-4 col-md-4">
-			<div class="animated rotateInDownLeft">
-				<div class="service-box">
-				<div class="service-icon">
-					<span class="fa fa-2x '.$row['icono'].'"></span> 
-					</div>
-					<div class="service-desc">						
-					<h5>'.$row['titulo'].'</h5>
-					<div class="divider-header"></div>
-					<p>'.$row['parrafo'].'</p>
-					<a href="#" class="btn btn-skin">Learn more</a>
-				</div>
-			</div>
-			{ echo '<div class="col-xs-6 col-sm-4 col-md-4">
-			<div class="animated rotateInDownLeft">
-				<div class="service-box">
-					<div class="service-icon">
-						<span class="fa fa-2x '.$row['icono'].'"></span> 
-					</div>
-			</div><!-- fin seccion -->';
-			}
-			$contador = $contador + 1; ?>
-				<div class="service-desc">
-					<h5>'.$row['titulo'].'</h5>
-						<div class="divider-header"></div>
-						<p>'.$row['parrafo'].'</p>
-						<a href="#" class="btn btn-skin">Learn more</a>
+						$result=mysql_query("SELECT * FROM SERVICIOS");
+						$contador= 1;
+						while($row = mysql_fetch_assoc($result)) 
+						{ echo '<div class="col-xs-6 col-sm-4 col-md-4">
+						<div class="animated rotateInDownLeft">
+						  <div class="service-box">
+								<div class="service-icon">
+									<span class="fa fa-2x '.$row['icono'].'"></span> 
+								</div>
+								<div class="service-desc">						
+									<h5>'.$row['titulo'].'</h5>
+									<div class="divider-header"></div>
+									<p>'.$row['parrafo'].'</p>
+									<a href="#" class="btn btn-skin">Learn more</a>
+								</div>
+						  </div>
 						</div>
-				</div>
-			</div>
-		</div><!-- fin seccion -->';
-			if ($contador%3==0)
-			{ echo '<br />'; }
-			$contador = $contador + 1;
+				</div><!-- fin seccion -->';
+				if ($contador%3==0)
+				{ echo '<br />'; }
+				$contador = $contador + 1;
 			}?>
 		</div>		
 	</div>

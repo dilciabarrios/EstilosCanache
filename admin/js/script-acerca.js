@@ -4,7 +4,7 @@ function addRecord() {
     var titulo = $("#titulo").val();
     var parrafo = $("#parrafo").val();
  
-    // Add record
+    // Add record ACERCA
     $.post("../acerca/ajax/addRecord.php", {
         titulo: titulo,
         parrafo: parrafo
@@ -88,3 +88,8 @@ $(document).ready(function () {
     // READ recods on page load
     readRecords(); // calling function
 });
+
+
+
+
+

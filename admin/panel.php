@@ -15,25 +15,28 @@ if(isset($_SESSION['usuario'])) {?>
 		                    Bienvenido
 		                </h1>
 		            </div>
+		            <!-- acerca -->
 		            <div class="col-md-3">
 		                    <div class="panel-body">
 		                        <a href="acerca/index.php" class="thumbnail"><img src="img/editar.png"></a>
 		                    </div>
 		            </div>
+		            <!-- servicios-->
 		            <div class="col-md-3">
 		                    <div class="panel-body">
-		                         <a href="#" class="thumbnail"><img src="img/servicio.png"></a>
+		                         <a href="servicios/index.php" class="thumbnail"><img src="img/servicio.png"></a>
 		                    </div>
 		            </div>
+		            <!--portafolio -->
 		            <div class="col-md-3">
 		                    <div class="panel-body">
-		                         <a href="#" class="thumbnail"><img src="img/imagenes.png"></a>
+		                         <a href="portafolio/index.php" class="thumbnail"><img src="img/imagenes.png"></a>
 		                    </div>
 		            </div>
-
+		            <!-- usuarios -->
 		            <div class="col-md-3">
 		                    <div class="panel-body">
-		                         <a href="#" class="thumbnail"><img src="img/usuario.png"></a>
+		                         <a href="usuarios/index.php" class="thumbnail"><img src="img/usuario.png"></a>
 		                    </div>
 		            </div>
 		        </div>

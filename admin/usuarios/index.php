@@ -17,7 +17,7 @@
 		        <div class="row">
 		            <div class="col-lg-12">
 		                <h1 class="page-header text-muted">
-		                    Acerca
+		                    Usuarios
 		                </h1>
 <!-- Content Section -->
 <div class="container">
@@ -52,14 +52,31 @@
             <div class="modal-body">
 
                 <div class="form-group">
-                    <label for="titulo">Titulo</label>
-                    <input type="text" id="titulo" placeholder="Titulo" class="form-control"/>
+                    <label for="titulo">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Nombre" class="form-control"/>
                 </div>
 
                 <div class="form-group">
-                    <label for="parrafo">Parrafo</label>
-                    <textarea class="form-control" id="parrafo" placeholder="Parrafo" cols="30" rows="10"></textarea>
+                    <label for="titulo">Correo</label>
+                    <input type="text" id="correo" placeholder="Correo" class="form-control"/>
                 </div>
+
+                <div class="form-group">
+                    <label for="titulo">Usuario</label>
+                    <input type="text" id="usuario" placeholder="Usuario" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="activo" checked="checked" value="1"> Estatus Usuario
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="titulo">Clave</label>
+                    <input type="password" id="clave" placeholder="Clave" class="form-control"/>
+                </div>
+
 
             </div>
             <div class="modal-footer">
@@ -82,13 +99,29 @@
             <div class="modal-body">
 
                 <div class="form-group">
-                    <label for="titulo">Titulo</label>
-                    <input type="text" id="update_titulo" placeholder="Titulo"  class="form-control"/>
+                    <label for="titulo">Nombre</label>
+                    <input type="text" id="update_nombre" placeholder="Nombre" class="form-control"/>
                 </div>
 
                 <div class="form-group">
-                    <label for="parrafo">Parrafo</label>
-                    <textarea class="form-control" id="update_parrafo" placeholder="Parrafo" cols="30" rows="10"></textarea>
+                    <label for="titulo">Correo</label>
+                    <input type="text" id="update_correo" placeholder="Correo" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="titulo">Usuario</label>
+                    <input type="text" id="update_usuario" placeholder="Usuario" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="update_activo" checked="checked" value="1"> Estatus Usuario
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="titulo">Clave</label>
+                    <input type="password" id="update_clave" placeholder="Clave" class="form-control"/>
                 </div>
 
             </div>
@@ -109,9 +142,11 @@
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 
 <!-- Custom JS file -->
-<script type="text/javascript" src="../js/script-acerca.js"></script>
+<script type="text/javascript" src="../js/script-usuarios.js"></script>
 
 <script>
+
+
 
 </script>
 </body>
