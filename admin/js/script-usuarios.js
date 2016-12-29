@@ -4,6 +4,7 @@ function addRecord() {
     var nombre = $("#nombre").val();
     var correo = $("#correo").val();
     var usuario = $("#usuario").val();
+    var activo = $("#activo").val();
     var clave = $("#clave").val();
  
     // Add record
@@ -11,6 +12,7 @@ function addRecord() {
         nombre: nombre,
         correo: correo,
         usuario: usuario,
+        activo:activo,
         clave: clave
     }, function (data, status) {
         // close the popup
@@ -23,6 +25,7 @@ function addRecord() {
         $("#nombre").val("");
         $("#correo").val("");
         $("#usuario").val("");
+        $("#activo").val("");
         $("#clave").val("");
     });
 }
@@ -62,6 +65,7 @@ function GetUserDetails(id) {
             $("#update_nombre").val(user.nombre);
             $("#update_correo").val(user.correo);
             $("#update_usuario").val(user.usuario);
+            $("#update_activo").val(user.activo);
             $("#update_clave").val(user.clave);
         }
     );
@@ -74,6 +78,7 @@ function UpdateUserDetails() {
     var nombre = $("#update_nombre").val();
     var correo = $("#update_correo").val();
     var usuario = $("#update_usuario").val();
+    var activo = $("#update_activo").val();
     var clave = $("#update_clave").val();
 
     // get hidden field value
@@ -81,16 +86,19 @@ function UpdateUserDetails() {
 
     // Update the details by requesting to the server using ajax
     $.post("../usuarios/ajax/updateUserDetails.php", {
+        id: id,
         nombre: nombre,
         correo: correo,
         usuario: usuario,
+        activo: activo,
         clave: clave
         },
         function (data, status) {
             // hide modal popup
-            $("#update_user_modal").modal("hide");
-            // reload Users by using readRecords();
-            readRecords();
+        $("#update_user_modal").modal("hide");
+        // reload Users by using readRecords();
+        readRecords();
+
         }
     );
 }

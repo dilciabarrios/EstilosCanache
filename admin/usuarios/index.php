@@ -9,7 +9,6 @@
 	<link href="../assets/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
-<? include('../resources/includes/navbar.php'); ?>
 	<div class="container">
 		<div class="container-fluid">	
 			<div class="modulos">
@@ -68,7 +67,7 @@
 
                 <div class="form-group">
                     <label>
-                        <input type="checkbox" id="activo" checked="checked" value="1"> Estatus Usuario
+                        <input type="checkbox" id="activo" value="1"> Estatus Usuario
                     </label>
                 </div>
 
@@ -88,6 +87,7 @@
 </div>
 <!-- // Modal -->
 
+
 <!-- Modal - Update User details -->
 <div class="modal fade" id="update_user_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -95,6 +95,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Update</h4>
+
             </div>
             <div class="modal-body">
 
@@ -115,7 +116,7 @@
 
                 <div class="form-group">
                     <label>
-                        <input type="checkbox" id="update_activo" checked="checked" value="1"> Estatus Usuario
+                        <input type="checkbox" id="update_activo" <?=$fetched_row['activo']=='1'? 'checked':'' ?>/> Activo
                     </label>
                 </div>
 

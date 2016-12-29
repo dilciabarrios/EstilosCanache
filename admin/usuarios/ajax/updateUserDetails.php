@@ -8,11 +8,11 @@ if(isset($_POST))
 		$nombre = $_POST['nombre'];
 		$correo = $_POST['correo'];
 		$usuario = $_POST['usuario'];
-        $activo = $_POST['activo'];
+        $activo = isset($_POST['activo'])? '1': '0'; 
 		$clave = $_POST['clave'];
 
     // Updaste User details
-    $query = "UPDATE usuarios SET nombre = '$nombre', correo = '$correo', usuario= '$usuario', clave='$clave' WHERE id = '$id'";
+    $query = "UPDATE usuarios SET nombre = '$nombre', correo = '$correo', usuario= '$usuario', clave='$clave', activo='$activo' WHERE id='".$_POST['id']."'";
     if (!$result = mysql_query($query)) {
         exit(mysql_error());
     }

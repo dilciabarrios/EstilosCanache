@@ -9,7 +9,6 @@
 	<link href="../assets/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
-<? include('../resources/includes/navbar.php'); ?>
 	<div class="container">
 		<div class="container-fluid">	
 			<div class="modulos">

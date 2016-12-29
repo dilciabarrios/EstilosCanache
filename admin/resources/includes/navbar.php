@@ -15,147 +15,29 @@
 				</div> <!--Si quito este div se desplaza hacia abajo los iconos y content manager queda solo arriba -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		            <ul class="nav navbar-top-links navbar-left">
-		                <li class="dropdown">
-		                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-		                        <h4 class="text-muted"><span class="glyphicon glyphicon-pencil"></span><i class="fa fa-caret-down"></i></h4>
+		                <li>
+		                    <a href="acerca/index.php">		                        
+		                    <h4 class="text-muted"><span class="glyphicon glyphicon-pencil"></span></h4>
 		                        <h6 class="text-muted">Acerca</h6>
 		                    </a>
-		                    <ul class="dropdown-menu dropdown-messages">
-		                        <li>
-		                            <a href="#">
-		                                <div>
-		                                    <strong>John Smith</strong>
-		                                    <span class="pull-right text-muted">
-		                                        <em>Yesterday</em>
-		                                    </span>
-		                                </div>
-		                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-		                            </a>
-		                        </li>
-		                        <li class="divider"></li>
-		                        <li>
-		                            <a href="#">
-		                                <div>
-		                                    <strong>John Smith</strong>
-		                                    <span class="pull-right text-muted">
-		                                        <em>Yesterday</em>
-		                                    </span>
-		                                </div>
-		                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-		                            </a>
-		                        </li>
-		                        <li class="divider"></li>
-		                        <li>
-		                            <a href="#">
-		                                <div>
-		                                    <strong>John Smith</strong>
-		                                    <span class="pull-right text-muted">
-		                                        <em>Yesterday</em>
-		                                    </span>
-		                                </div>
-		                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-		                            </a>
-		                        </li>
-		                        <li class="divider"></li>
-		                        <li>
-		                            <a class="text-center" href="#">
-		                                <strong>Read All Messages</strong>
-		                                <i class="fa fa-angle-right"></i>
-		                            </a>
-		                        </li>
-		                    </ul>
-		                    <!-- /.dropdown-messages -->
 		                </li>
 						
-		                <li class="dropdown">
-		                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-		                        <h4 class="text-muted"><span class="glyphicon glyphicon-tasks"></span><i class="fa fa-caret-down"></i></h4> 
+		                <li>
+		                    <a  href="servicios/index.php">
+		                        <h4 class="text-muted"><span class="glyphicon glyphicon-tasks"></span></h4> 
 		                        <h6 class="text-muted">Servicios</h6>
 		                    </a>
-		                    <ul class="dropdown-menu dropdown-tasks">
-		                        <li>
-		                            <a href="#">
-		                                <div>
-		                                    <p>
-		                                        <strong>Task 1</strong>
-		                                        <span class="pull-right text-muted">40% Complete</span>
-		                                    </p>
-		                                    <div class="progress progress-striped active">
-		                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-		                                            <span class="sr-only">40% Complete (success)</span>
-		                                        </div>
-		                                    </div>
-		                                </div>
-		                            </a>
-		                        </li>
-		                        <li class="divider"></li>
-		                        <li>
-		                            <a href="#">
-		                                <div>
-		                                    <p>
-		                                        <strong>Task 2</strong>
-		                                        <span class="pull-right text-muted">20% Complete</span>
-		                                    </p>
-		                                    <div class="progress progress-striped active">
-		                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-		                                            <span class="sr-only">20% Complete</span>
-		                                        </div>
-		                                    </div>
-		                                </div>
-		                            </a>
-		                        </li>
-		                        <li class="divider"></li>
-		                        <li>
-		                            <a href="#">
-		                                <div>
-		                                    <p>
-		                                        <strong>Task 3</strong>
-		                                        <span class="pull-right text-muted">60% Complete</span>
-		                                    </p>
-		                                    <div class="progress progress-striped active">
-		                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-		                                            <span class="sr-only">60% Complete (warning)</span>
-		                                        </div>
-		                                    </div>
-		                                </div>
-		                            </a>
-		                        </li>
-		                        <li class="divider"></li>
-		                        <li>
-		                            <a href="#">
-		                                <div>
-		                                    <p>
-		                                        <strong>Task 4</strong>
-		                                        <span class="pull-right text-muted">80% Complete</span>
-		                                    </p>
-		                                    <div class="progress progress-striped active">
-		                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-		                                            <span class="sr-only">80% Complete (danger)</span>
-		                                        </div>
-		                                    </div>
-		                                </div>
-		                            </a>
-		                        </li>
-		                        <li class="divider"></li>
-		                        <li>
-		                            <a class="text-center" href="#">
-		                                <strong>See All Tasks</strong>
-		                                <i class="fa fa-angle-right"></i>
-		                            </a>
-		                        </li>
-		                    </ul>
-		                    <!-- /.dropdown-tasks -->
 		                </li>
 		                <!-- /.dropdown -->
-		                <li class="dropdown">
-		                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+		                <li>
+		                    <a href="portafolio/index.php">
 		                        <h4 class="text-muted"><span class="glyphicon glyphicon-picture"></h4>
 		                        <h6 class="text-muted">Portafolio</h6>
 		                    </a>
 		                </li>
 		                <!-- /.dropdown -->
-		                <li class="dropdown">
-		                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+		                <li>
+		                    <a href="usuarios/index.php">
 		                        <h4 class="text-muted"><span class="fa fa-user fa-fw"></span></h4>
 		                        <h6 class="text-muted">Usuarios</h6>
 		                    </a>
@@ -169,9 +51,7 @@
 		                       <h6 class="text-muted">Finalizar Sesion</h6>
 		                    </a>
 		                    <ul class="dropdown-menu dropdown-user">
-		                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-		                        </li>
-		                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+		                        <li><a href="usuarios/index.php"><i class="fa fa-user fa-fw"></i> User Profile</a>
 		                        </li>
 		                        <li class="divider"></li>
 		                        <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>

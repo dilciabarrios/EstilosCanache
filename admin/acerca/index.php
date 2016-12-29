@@ -9,7 +9,6 @@
 	<link href="../assets/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
-<? include('../resources/includes/navbar.php'); ?>
 	<div class="container">
 		<div class="container-fluid">	
 			<div class="modulos">
@@ -65,6 +64,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                 <button type="button" class="btn btn-primary" onclick="addRecord()">Add Record</button>
+
             </div>
         </div>
     </div>

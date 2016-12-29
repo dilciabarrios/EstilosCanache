@@ -18,25 +18,25 @@ if(isset($_SESSION['usuario'])) {?>
 		            <!-- acerca -->
 		            <div class="col-md-3">
 		                    <div class="panel-body">
-		                        <a href="acerca/index.php" class="thumbnail"><img src="img/editar.png"></a>
+		                        <a href="acerca/index.php" class="thumbnail"><img src="img/editar.png" title="Acerca"></a>
 		                    </div>
 		            </div>
 		            <!-- servicios-->
 		            <div class="col-md-3">
 		                    <div class="panel-body">
-		                         <a href="servicios/index.php" class="thumbnail"><img src="img/servicio.png"></a>
+		                         <a href="servicios/index.php" class="thumbnail"><img src="img/servicio2.png " title="Servicios"></a>
 		                    </div>
 		            </div>
 		            <!--portafolio -->
 		            <div class="col-md-3">
 		                    <div class="panel-body">
-		                         <a href="portafolio/index.php" class="thumbnail"><img src="img/imagenes.png"></a>
+		                         <a href="portafolio/index.php" class="thumbnail"><img src="img/imagenes.png" title="Imagenes"></a>
 		                    </div>
 		            </div>
 		            <!-- usuarios -->
 		            <div class="col-md-3">
 		                    <div class="panel-body">
-		                         <a href="usuarios/index.php" class="thumbnail"><img src="img/usuario.png"></a>
+		                         <a href="usuarios/index.php" class="thumbnail"><img src="img/usuario.png" title="Usuarios"></a>
 		                    </div>
 		            </div>
 		        </div>
@@ -48,12 +48,12 @@ if(isset($_SESSION['usuario'])) {?>
 		            </div>
 		            <div class="col-md-3">
 		                    <div class="panel-body">
-		                         <a href="#" class="thumbnail"><img src="img/opciones.png"></a>
+		                        
 		                    </div>
 		            </div>
 		            <div class="col-md-3">
 		                    <div class="panel-body">
-		                         <a href="#" class="thumbnail"><img src="img/archivo.png"></a>
+		                       
 		                    </div>
 		            </div>
 		            <div class="col-md-3">

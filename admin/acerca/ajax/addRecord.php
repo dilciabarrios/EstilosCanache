@@ -10,12 +10,10 @@
 		$titulo = $_POST['titulo'];
 		$parrafo = $_POST['parrafo'];
 
-		$query = "INSERT INTO acerca (titulo,parrafo) VALUES('$titulo', '$parrafo')";
+		$query = "INSERT INTO acerca (titulo,parrafo) VALUES('$titulo', '$parrafo') where LIMIT 1" ;
 		if (!$result = mysql_query($query)) {
 	        exit(mysql_error());
 	    }
 	    echo "1 Record Added!";
 	}
 ?>
-
-
