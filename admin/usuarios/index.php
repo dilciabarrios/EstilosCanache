@@ -63,7 +63,6 @@
             <th>Correo</th>
             <th>Usuario</th>
             <th>Activo</th>
-            <th>Clave</th>
             <th>Editar</th>
             <th>Eliminar</th>
             </tr>";
@@ -79,7 +78,6 @@
             <td>".$row[2]."</td>
             <td>".$row[3]."</td>
             <td>".$row[5]."</td>
-            <td>".$row[4]."</td>
             <td><center><a href='editar.php?id=".$row[0]."'>Editar</a></center></td>
             <td><center><a href='eliminar.php?id=".$row[0]."'>Eliminar</a></center></td>
             </tr>";

@@ -41,10 +41,24 @@
 							$precio = $_POST['precio'];
 							$cantidad = $_POST['cantidad'];
 							$destacado = isset($_POST['destacado'])? '1': '0';
-							$nombre=$_FILES['foto']['name'];
 
-							// Updaste User details
-							$sql_query = "UPDATE portafolio SET  descripcion='$descripcion', precio='$precio', cantidad='$cantidad', destacado='$destacado' WHERE id='".$_POST['id']."'"; // PARA este caso lo mando por POST y no por GET porque lo envio por formulario el hidden mediante POST 
+				
+							  $ruta = "imagenes/";
+								opendir($ruta);
+								$destino = $ruta.$_FILES['foto']['name'];
+								copy($_FILES['foto']['tmp_name'],$destino);
+
+
+				        if (move_uploaded_file($_FILES['foto']['tmp_name'], $destino)){ 
+				        		 $nom= $_FILES['foto']['name'];
+									// Updaste User details
+							 		$sql_query = "UPDATE portafolio SET  descripcion='$descripcion', precio='$precio', cantidad='$cantidad', destacado='$destacado', imagen='$nom' WHERE id='".$_POST['id']."'"; // PARA este caso lo mando por POST y no por GET porque lo envio por formulario el hidden mediante POST 
+				        }   		
+				        else{
+
+				        		$sql_query = "UPDATE portafolio SET  descripcion='$descripcion', precio='$precio', cantidad='$cantidad', destacado='$destacado' WHERE id='".$_POST['id']."'"; // PARA este caso lo mando por POST y no por GET porque lo envio por formulario el hidden mediante POST 
+				        }
+
 							mysql_query($sql_query);
 							}
 	
