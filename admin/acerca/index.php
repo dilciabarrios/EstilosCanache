@@ -23,93 +23,72 @@
     <div class="row">
         <div class="col-md-12">
             <div class="pull-left">
-                <button class="btn btn-success" data-toggle="modal" data-target="#add_new_record_modal">Añadir Nuevo</button>
+                <button class="btn btn-success" type="button" onclick="location.href='registrar.php'">Anadir Nuevo</button>
                  <button class="btn btn-default" type="button" onclick="location.href='../index.php'">Regresar</button>
 
             </div>
         </div>
-    </div>
+    </div> 
+    <br>  
     <div class="row">
-        <div class="col-md-12">
-            <h3></h3>
+        <div class="container">
 
-            <div class="records_content"></div>
+            <? include('../resources/includes/db_connection.php'); 
+
+            if(isset($_POST['update']))
+            {
+            $titulo = $_POST['titulo'];
+            $parrafo = $_POST['parrafo'];
+
+            // Updaste User details
+            $sql_query = "UPDATE acerca SET  titulo='$titulo', parrafo='$parrafo' WHERE id='".$_POST['id']."'"; // PARA este caso lo mando por POST y no por GET porque lo envio por formulario el hidden mediante POST 
+            mysql_query($sql_query);
+            }
+
+            $sql = "SELECT * FROM acerca";
+            $result = mysql_query ($sql);
+            if (! $result){
+            echo "La consulta SQL contiene errores.".mysql_error();
+            exit();
+            }else {
+            echo "
+            <div class='table-responsive'>
+            <table class='table table-striped table-bordered table-hover table-condensed'>
+            <tr class='success'>
+            <th>Nro</th>
+            <th>Titulo</th>
+            <th>Parrafo</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+            </tr>";
+            if(mysql_num_rows($result) > 0)
+            {
+            $number = 1;
+
+            while ($row = mysql_fetch_row($result)){
+
+            echo "</tr>
+            <td>".$number."</td>
+            <td>".$row[1]."</td>
+            <td>".$row[2]."</td>
+            <td><center><a href='editar.php?id=".$row[0]."'>Editar</a></center></td>
+            <td><center><a href='eliminar.php?id=".$row[0]."'>Eliminar</a></center></td>
+            </tr>";
+            $number++;
+            }
+            }
+            }
+            ?> 
+
+            </table>
         </div>
     </div>
 </div>
-<!-- /Content Section -->
-
-<!-- Bootstrap Modals -->
-<!-- Modal - Add New Record/User -->
-<div class="modal fade" id="add_new_record_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Add New Record</h4>
-            </div>
-            <div class="modal-body">
-
-                <div class="form-group">
-                    <label for="titulo">Titulo</label>
-                    <input type="text" id="titulo" placeholder="Titulo" class="form-control"/>
-                </div>
-
-                <div class="form-group">
-                    <label for="parrafo">Parrafo</label>
-                    <textarea class="form-control" id="parrafo" placeholder="Parrafo" cols="30" rows="10"></textarea>
-                </div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary" onclick="addRecord()">Add Record</button>
-
-            </div>
-        </div>
-    </div>
-</div>
-<!-- // Modal -->
-
-<!-- Modal - Update User details -->
-<div class="modal fade" id="update_user_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Update</h4>
-            </div>
-            <div class="modal-body">
-
-                <div class="form-group">
-                    <label for="titulo">Titulo</label>
-                    <input type="text" id="update_titulo" placeholder="Titulo"  class="form-control"/>
-                </div>
-
-                <div class="form-group">
-                    <label for="parrafo">Parrafo</label>
-                    <textarea class="form-control" id="update_parrafo" placeholder="Parrafo" cols="30" rows="10"></textarea>
-                </div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary" onclick="UpdateUserDetails()" >Save Changes</button>
-                <input type="hidden" id="hidden_id">
-            </div>
-        </div>
-    </div>
-</div>
-<!-- // Modal -->
 
 <!-- Jquery JS file -->
 <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
-
 <!-- Bootstrap JS file -->
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-
-<!-- Custom JS file -->
-<script type="text/javascript" src="../js/script-acerca.js"></script>
 
 <script>
 

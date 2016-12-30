@@ -34,52 +34,51 @@
     <div class="row">
         <div class="col-md-12">
             <br>	
-  <?php
-	$conexion = mysql_connect ("localhost", "root", "20101489") or die ("Problemas de conexion");
-	mysql_select_db("canaches", $conexion) or die ("Problemas de seleccion en la BD");
-	// check request
-	if(isset($_GET['id']))
-	{
-	$sql_query="SELECT * FROM portafolio WHERE id=".$_GET['id'];
-	$result_set=mysql_query($sql_query);
-	$fetched_row=mysql_fetch_array($result_set);
-	}
-	?>
-	                <form method="post" action="index.php" enctype="multipart/form-data">
+              <?php
+            	$conexion = mysql_connect ("localhost", "root", "20101489") or die ("Problemas de conexion");
+            	mysql_select_db("canaches", $conexion) or die ("Problemas de seleccion en la BD");
+            	// check request
+            	if(isset($_GET['id']))
+            	{
+            	$sql_query="SELECT * FROM portafolio WHERE id=".$_GET['id'];
+            	$result_set=mysql_query($sql_query);
+            	$fetched_row=mysql_fetch_array($result_set);
+            	}
+            ?>
+            <form method="post" action="index.php" enctype="multipart/form-data">
 
-                    <div class="form-group">
-                        <label for="descripcion">Descripcion</label>
-                        <input type="text" name="descripcion" placeholder="Descripcion" class="form-control" value="<?php echo $fetched_row['descripcion']; ?>"/>
-                        <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
-                    </div>
+                <div class="form-group" >
+                    <label for="descripcion">Descripcion</label>
+                    <input type="text" name="descripcion" placeholder="Descripcion" class="form-control" value="<?php echo $fetched_row['descripcion']; ?>"/>
+                    <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
+                </div>
 
-                    <div class="form-group">
-                        <label for="precio">Precio</label>
-                        <input type="text" name="precio" placeholder="Precio" class="form-control" value="<?php echo $fetched_row['precio']; ?>"/>
-                    </div>
+                <div class="form-group">
+                    <label for="precio">Precio</label>
+                    <input type="text" name="precio" placeholder="Precio" class="form-control" value="<?php echo $fetched_row['precio']; ?>"/>
+                </div>
 
-                    <div class="form-group">
-                        <label for="cantidad">Cantidad</label>
-                        <input type="text" name="cantidad" placeholder="cantidad" class="form-control" value="<?php echo $fetched_row['cantidad']; ?>" />
-                    </div>
+                <div class="form-group">
+                    <label for="cantidad">Cantidad</label>
+                    <input type="text" name="cantidad" placeholder="cantidad" class="form-control" value="<?php echo $fetched_row['cantidad']; ?>" />
+                </div>
 
-                    <div class="form-group">
-                        <label>
-                            <input type="checkbox" name="destacado" <?=$fetched_row['destacado']=='1'? 'checked':'' ?>/>
-															Imagen Destacada
-                        </label>
-                    </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="destacado" <?=$fetched_row['destacado']=='1'? 'checked':'' ?>/>
+            			Imagen Destacada
+                    </label>
+                </div>
 
-                    <div class="form-group">
-                        <label for="adjuntar">Adjuntar Imagen</label>
-                        <input type="file" name="foto" value="<?=$fetched_row['imagen']; ?> "/>
+                <div class="form-group" action>
+                    <label for="adjuntar">Adjuntar Imagen</label>
+                    <input type="file" name="foto"  class="filestyle" value="1"/>
+                    <p class="help-block">Maximo 50MB</p>
+                </div>
 
-                        <p class="help-block">Maximo 50MB</p>
-                    </div>
+                <button type="submit" name="update" class="btn btn-primary">Update</button>
 
-                    <button type="submit" name="update" class="btn btn-primary">Update</button>
-            
-                </form>
+            </form>
             <br>
         </div>
     </div>
@@ -88,13 +87,12 @@
 
 <!-- Jquery JS file -->
 <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
-
 <!-- Bootstrap JS file -->
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-
-<!-- Custom JS file -->
-<script type="text/javascript" src="../js/script-portafolio.js"></script>
-
+<!-- Bootstrap JS file -->
+<script type="text/javascript" src="../js/bootstrap-filestyle.js"></script>
+<!-- Bootstrap JS file -->
+<script type="text/javascript" src="../js/bootstrap-filestyle.min.js"></script>
 
 <script>
 

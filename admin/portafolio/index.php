@@ -28,41 +28,80 @@
 
             </div>
         </div>
-    </div>   
+    </div> 
+    <br>  
     <div class="row">
-        <div class="col-md-12">
-            <h3></h3>
+				<div class="container">
+						
+						<? include('../resources/includes/db_connection.php'); 
 
-            <div class="records_content"></div>
-        </div>
-    </div>
+							if(isset($_POST['update']))
+							{
+							$descripcion = $_POST['descripcion'];
+							$precio = $_POST['precio'];
+							$cantidad = $_POST['cantidad'];
+							$destacado = isset($_POST['destacado'])? '1': '0';
+							$nombre=$_FILES['foto']['name'];
+
+							// Updaste User details
+							$sql_query = "UPDATE portafolio SET  descripcion='$descripcion', precio='$precio', cantidad='$cantidad', destacado='$destacado' WHERE id='".$_POST['id']."'"; // PARA este caso lo mando por POST y no por GET porque lo envio por formulario el hidden mediante POST 
+							mysql_query($sql_query);
+							}
+	
+							$sql = "SELECT * FROM portafolio";
+							$result = mysql_query ($sql);
+								if (! $result){
+								   echo "La consulta SQL contiene errores.".mysql_error();
+								   exit();
+								}else {
+								    echo "
+							<div class='table-responsive'>
+								<table class='table table-striped table-bordered table-hover table-condensed'>
+									<tr class='success'>
+										<th>Nro</th>
+										<th>Descripcion</th>
+										<th>Precio</th>
+										<th>Cantidad</th>
+										<th>Destacado</th>
+										<th>Imagen</th>
+										<th>Editar</th>
+										<th>Eliminar</th>
+									</tr>";
+									if(mysql_num_rows($result) > 0)
+                  {
+										$number = 1;
+
+									 while ($row = mysql_fetch_row($result)){
+			           
+									  echo "</tr>
+							       <td>".$number."</td>
+					           <td>".$row[2]."</td>
+				             <td>".$row[3]."</td>
+									   <td>".$row[4]."</td>
+									   <td>".$row[5]."</td>
+									   <td>".$row[1]."</td>
+									  <td><center><a href='editar.php?id=".$row[0]."'>Editar</a></center></td>
+						 			  <td><center><a href='eliminar.php?id=".$row[0]."'>Eliminar</a></center></td>
+									  </tr>";
+										$number++;
+    								}
+								 }
+								 }
+								?> 
+				
+						</table>
+				</div>
+		</div>
 </div>
-
-	<?php
-	$conexion = mysql_connect ("localhost", "root", "20101489") or die ("Problemas de conexion");
-	mysql_select_db("canaches", $conexion) or die ("Problemas de seleccion en la BD");
-	if(isset($_POST['update']))
-	{
-	$descripcion = $_POST['descripcion'];
-	$precio = $_POST['precio'];
-	$cantidad = $_POST['cantidad'];
-	$destacado = isset($_POST['destacado'])? '1': '0';
-	$imagen=$_FILES['foto']['name']; 
-	// Updaste User details
-	$sql_query = "UPDATE portafolio SET  descripcion='$descripcion', precio='$precio', cantidad='$cantidad', destacado='$destacado', imagen='$imagen' WHERE id='".$_POST['id']."'"; // PARA este caso lo mando por POST y no por GET porque lo envio por formulario el hidden mediante POST 
-	mysql_query($sql_query);
-	}
-	?>
-<!-- /Content Section -->
 
 <!-- Jquery JS file -->
 <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
-
 <!-- Bootstrap JS file -->
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-
-<!-- Custom JS file -->
-<script type="text/javascript" src="../js/script-portafolio.js"></script>
+<!-- Bootstrap JS file -->
+<script type="text/javascript" src="../js/bootstrap-filestyle.js"></script>
+<!-- Bootstrap JS file -->
+<script type="text/javascript" src="../js/bootstrap-filestyle.min.js"></script>
 
 
 <script>
